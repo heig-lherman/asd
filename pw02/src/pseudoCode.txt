@@ -1,0 +1,42 @@
+/*
+  ---------------------------------------------------------------------------
+  Fichier     : pseudoCode.txt
+  Nom du labo : L2-Recursivite
+  Auteur(s)   : [redacted]
+  Date        : 08.03.2022
+  But         : Regroupement des idées pour l'implémentation du code
+  Remarque(s) : Reflexion de groupe
+  Compilateur : MinGW-w64 g++ 11.2.0
+  ---------------------------------------------------------------------------
+*/
+
+Regroupement des idées pour la résolution du puzzle impossible
+
+1er emplacement : on peut mettre l'ensemble des pièces, dans l'ensemble des positions
+-> Vecteur de pièces dans leurs positions
+
+A chaque étape
+On a un vecteur des pièces disponibles, dans toutes leurs rotations
+Dès qu'une pièce est testée (solution valide ou non), on la retire des pièces à tester en position X
+On teste jusqu'à ne plus avoir de pièces à tester (vecteur vide)
+
+1ère pièce - Pas de check
+pièces 2 et 3 -> check à gauche
+pièce 4 -> check en haut (1ère ligne)
+pièces 5 et 6 -> check gauche et en haut
+pièce 7 -> check en haut (2ème ligne)
+pièces 8 et 9 -> check en haut et à gauche ()
+
+Cases adjacentes calculées avec n%3 (colonne) et n/3 (ligne)
+
+En paramètres -> vecteur de pièces pour la solution actuellement testée
+
+Si on a un vecteur de 9 pièces pour la solution -> on l'ajoute à la liste de solutions
+
+----
+
+Type de retour : void
+@param : 1 vecteur en copie (pièces à tester)
+@param : 1 vecteur en références (les solutions)
+@param : 1 unsigned int (position que l'on teste)
+@param : 1 vecteur en reference (la solution en cours de test)

@@ -1,0 +1,46 @@
+Tapez 0 pour tester avec des entiers, 1 pour le faire avec des objets mouchards : 1
+ C(-42)
+Remplissage avec push_front()
+ C(1)  CP(1)  D(1)  C(1)  CP(1)  D(1)  C(5)  CP(5)  D(5)  C(2)  CP(2)  D(2)  C(4)  CP(4)  D(4)  C(2)  CP(2)  D(2)  C(0)  CP(0)  D(0)  C(2)  CP(2)  D(2)  C(5)  CP(5)  D(5)  C(1)  CP(1)  D(1)  C(2)  CP(2)  D(2)
+2 1 5 2 0 2 4 2 5 1 1
+Elément en tête : 2
+Elément en tête (const): 2
+Parcours const:
+2 1 5 2 0 2 4 2 5 1 1
+Construction par copie
+ C(-42)  CP(2)  CP(1)  CP(5)  CP(2)  CP(0)  CP(2)  CP(4)  CP(2)  CP(5)  CP(1)  CP(1)
+2 1 5 2 0 2 4 2 5 1 1
+Remplissage avec insert_after() à la fin
+ C(-42)  C(2)  CP(2)  D(2)  C(5)  CP(5)  D(5)  C(7)  CP(7)  D(7)  C(3)  CP(3)  D(3)  C(1)  CP(1)  D(1)  C(0)  CP(0)  D(0)
+2 5 7 3 1 0
+auto-affectation
+
+2 5 7 3 1 0
+affectation
+ C(-42)  CP(2)  CP(1)  CP(5)  CP(2)  CP(0)  CP(2)  CP(4)  CP(2)  CP(5)  CP(1)  CP(1)  CP(-42)  =(-42)  =(-42)  D(-42)  D(2)  D(5)  D(7)  D(3)  D(1)  D(0)  D(-42)
+2 1 5 2 0 2 4 2 5 1 1
+push_front() après copie
+ C(4)  CP(4)  D(4)  C(2)  CP(2)  D(2)  C(1)  CP(1)  D(1)  C(6)  CP(6)  D(6)  C(3)  CP(3)  D(3)  C(5)  CP(5)  D(5)
+l3 : 2 1 5 2 0 2 4 2 5 1 1
+ls : 5 3 6 1 2 4 2 1 5 2 0 2 4 2 5 1 1
+Nouvelle liste l4
+ C(-42)  C(9)  CP(9)  D(9)  C(8)  CP(8)  D(8)  C(7)  CP(7)  D(7)  C(6)  CP(6)  D(6)  C(5)  CP(5)  D(5)  C(4)  CP(4)  D(4)  C(3)  CP(3)  D(3)  C(2)  CP(2)  D(2)  C(1)  CP(1)  D(1)  C(0)  CP(0)  D(0)
+0 1 2 3 4 5 6 7 8 9
+splice les 4ème à 6émes éléments derrière le premier
+
+0 3 4 5 1 2 6 7 8 9
+splice le 5ème élément devant le premier
+
+1 0 3 4 5 2 6 7 8 9
+splice les 3 derniers éléments après le 2ème.
+
+1 0 7 8 9 3 4 5 2 6
+splice les 4ème à 7ème éléments de l4 vers l5
+ C(-42)
+l4: 1 0 7 5 2 6
+l5: 8 9 3 4
+Tri des 2 listes
+l4: 0 1 2 5 6 7 
+l5: 3 4 8 9 
+
+ D(3)  D(4)  D(8)  D(9)  D(-42)  D(0)  D(1)  D(2)  D(5)  D(6)  D(7)  D(-42)  D(2)  D(1)  D(5)  D(2)  D(0)  D(2)  D(4)  D(2)  D(5)  D(1)  D(1)  D(-42)  D(2)  D(1)  D(5)  D(2)  D(0)  D(2)  D(4)  D(2)  D(5)  D(1)  D(1)  D(-42)  D(5)  D(3)  D(6)  D(1)  D(2)  D(4)  D(2)  D(1)  D(5)  D(2)  D(0)  D(2)  D(4)  D(2)  D(5)  D(1)  D(1)  D(-42) 
